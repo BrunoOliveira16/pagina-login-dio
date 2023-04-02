@@ -8,14 +8,19 @@ export const ButtonContainer = styled.button `
     color: #FFFFFF;
     padding: 4px 12px;
     min-width: 120px;
-    width: 100%;
     text-transform: uppercase;
+    &:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
 
     ${({variant}) => variant !== "primary" && css `
+        width: 80%;
         min-width: 167px;
         height: 2rem;
         background: #E4105D;
         transition: .3s;
+        margin-top: 1rem;
 
         &:hover {
             opacity: .8;

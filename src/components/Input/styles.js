@@ -12,14 +12,23 @@ export const InputContainer = styled.div `
 
 export const IconContainer = styled.div `
     margin-right: .7rem;
+    color: #8647AD;
 `
 
 export const InputText = styled.input `
     background-color: transparent;
     color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 400;
     width: 100%;
     border: 0;
     height: 2rem;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: #FFFFFF;
+    }
 `
 
 export const ErrorText = styled.p `
