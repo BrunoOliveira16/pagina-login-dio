@@ -1,16 +1,20 @@
 import styled, { css } from "styled-components";
 
 export const ButtonContainer = styled.button `
-    background: #565656;
+    min-width: 120px;
+    padding: .3rem 1rem;
+    position: relative;
     border: 0;
     border-radius: 1.25rem;
-    position: relative;
+    
     color: #FFFFFF;
-    padding: 4px 12px;
-    min-width: 120px;
+    background: #565656;
+    
     text-transform: uppercase;
+    transition: background-color 0.2s ease-out 0s;
+
     &:hover {
-        opacity: .8;
+        background-color: #E4105D;
         cursor: pointer;
     }
 
@@ -23,8 +27,9 @@ export const ButtonContainer = styled.button `
         margin-top: 1rem;
 
         &:hover {
-            opacity: .8;
+            
             cursor: pointer;
+            box-shadow: #E4105D 0px 0px 48px 0px;
         }
 
         &::after {

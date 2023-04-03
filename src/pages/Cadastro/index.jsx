@@ -64,6 +64,7 @@ const Cadastro = () => {
               placeholder="Password" 
               control={control}
               leftIcon={<MdLock />}
+              type="password"
             />
             <Button title="Criar minha conta" variant="secondary" type="submit"/>
           </form>

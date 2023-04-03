@@ -20,6 +20,7 @@ import { MdEmail, MdLock } from 'react-icons/md';
 // Components
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import { useNavigate } from 'react-router-dom';
 
 // Função HookForms
 const schema = yup.object({
@@ -36,6 +37,11 @@ const Login = () => {
   console.log(errors, isValid);
   const onSubmit = data => console.log(data);
 
+  const navigate = useNavigate();
+  const handleClickSignIn = () => {
+    navigate('/feed')
+  };
+
   return (
     <Container>
       <Column>
@@ -49,8 +55,8 @@ const Login = () => {
           <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Input name="email" control={control} errorMessage={errors?.email?.message} placeholder="E-mail" leftIcon={<MdEmail />} />
-            <Input name="password" control={control} errorMessage={errors?.password?.message} placeholder="Senha" leftIcon={<MdLock />} />
-            <Button title="Entrar" variant="secondary" type="submit" />
+            <Input name="password" control={control} errorMessage={errors?.password?.message} placeholder="Senha" leftIcon={<MdLock />} type="password" />
+            <Button title="Entrar" variant="secondary" type="submit" onClick={handleClickSignIn}/>
           </form>
           <Row>
             <EsqueciText>Esqueci minha senha</EsqueciText>

@@ -22,7 +22,7 @@ export const Column = styled.div `
 `
 
 export const Wrapper = styled.div `
-    max-width: 374px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
 `

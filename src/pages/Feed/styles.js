@@ -2,24 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.main `
     width: 100%;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
-    margin-top: 7.5rem;
+    margin-top: 4rem;
     display: flex;
     flex-drirection: row;
     justify-content: space-between;
-    align-items: center;
-`
-
-export const Wrapper = styled.div `
-    max-width: 374px;
-    display: flex;
-    flex-direction: column;
-
-    & Button {
-        width: 167px;
-        margin-top: 2rem;
-    }
+    gap: 5rem;
 `
 
 export const Title = styled.h2 `
@@ -27,23 +16,25 @@ export const Title = styled.h2 `
     font-size: 2rem;
     font-weight: 700;
     font-style: normal;
-    line-height: 2.7rem
-    width: 20rem;
+    line-height: 2.5rem;
     margin-bottom: 1.25rem;
     color: #FFFFFF;
 `
 
-export const TitleHighLight = styled.span `
-    color: #E4105D;
-`
-
-export const TextContent = styled.p `
+export const TitleHighLight = styled.h3 `
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 700;
     font-style: normal;
-    line-height: 1.5rem
-    width: 26.25rem;
+    line-height: 2rem;
     margin-bottom: 1.5rem;
     color: #FFFFFF;
+`
+
+export const Column = styled.div `
+    flex: ${({flex}) => flex};
+    
+    &:nth-child(2) {
+        padding-left: 2rem;
+    }
 `

@@ -31,16 +31,16 @@ export const Wrapper = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px;
+    padding: .5rem 3rem;
 `
 
 export const BuscarInputContainer = styled.div `
-    width: 11rem;
-    height: 2rem;
-    background: #2D2D37;
+    width: 15rem;
+    height: 2.5rem;
+    background: rgb(45, 45, 55);
     border-radius: 8px;
-    padding: 4px 10px;
-    margin: 0 auto;
+    padding: 4px 14px;
+    margin: 0 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,11 +49,36 @@ export const BuscarInputContainer = styled.div `
 export const Menu = styled.a `
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
     line-height: 1.5rem
     color: #FFFFFF;
     margin-right: .75rem;
     text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(164, 77, 218);
+    }
+`
+
+export const MenuHighLight = styled.a `
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgb(21, 22, 27);
+    background-color: rgb(229, 225, 69);
+    padding: 0.5rem 0.75rem;
+    margin-right: .75rem;
+    text-decoration: none;
+    border-radius: 5px;
+
+    &:hover {
+        color: #FFFFFF;
+        cursor: pointer;
+    }
 `
 
 export const MenuRight = styled.a `
@@ -64,18 +89,35 @@ export const MenuRight = styled.a `
     color: #FFFFFF;
     margin-right: .75rem;
     text-decoration: none;
+    transition: color 0.2s ease-out 0s;
+
+    &:hover {
+        color: #E4105D;
+        cursor: pointer;
+    }
 `
 
 export const UserPicture = styled.img `
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border: 2px solid #FFFFFF;
     border-radius: 1.375rem;
 `
 
 export const Input = styled.input `
+    height: 2rem;
     background: transparent;
     flex: 1;
     border: 0;
+    color: #FFFFFF;
+
+    &::placeholder {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+`
+export const IconContainer = styled.div `
+    margin-right: .7rem;
     color: #FFFFFF;
 `
